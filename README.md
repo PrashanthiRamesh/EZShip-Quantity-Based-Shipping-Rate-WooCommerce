@@ -35,7 +35,9 @@ Steps to delete shipping rates:
 
 == Screenshots ==
 
-![Alt text](https://github.com/PrashanthiRamesh/PrangoShip-Quantity-Based-Shipping-Rate-for-WooCommerce/blob/master/assests/screenshot-1.png "Set Shipping rates section")
+Set Shipping rates section
+![Set Shipping rates section](https://github.com/PrashanthiRamesh/PrangoShip-Quantity-Based-Shipping-Rate-for-WooCommerce/blob/master/assests/screenshot-1.png )
 
-1. Set Shipping rates section
-2. Cart page with shipping rates based on order quantity set
+
+Cart page with shipping rates based on order quantity set
+![Cart page with shipping rates based on order quantity set](https://github.com/PrashanthiRamesh/PrangoShip-Quantity-Based-Shipping-Rate-for-WooCommerce/blob/master/assests/screenshot-2.png )
