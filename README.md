@@ -1,4 +1,4 @@
-=== EZShip [Quantity Based] for Woocommerce ===
+=== PrangoShip [Quantity Based] for Woocommerce ===
 Contributors: prash4
 Tags: admin, woocommerce, shipping rates
 Requires at least: 3.0.1
@@ -9,7 +9,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-EZShip -a Quantity Based shipping rate plugin that works well in your WooCommerce Store. It displays the shipping rate to your customers based on the quantity of items in the cart. You can segment the quantities into different ranges and assign the shipping rates respectively.
+PrangoShip -a Quantity Based shipping rate plugin that works well in your WooCommerce Store. It displays the shipping rate to your customers based on the quantity of items in the cart. You can segment the quantities into different ranges and assign the shipping rates respectively.
 
 == Installation ==
 
