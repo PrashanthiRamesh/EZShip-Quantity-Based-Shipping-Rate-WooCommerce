@@ -1,8 +1,8 @@
 <?php
 /*
-Plugin Name: PrangoShip Quantity Based Shipping Rate
-Plugin URI: https://wordpress.org/plugins/woocommerce-quantity-based-shipping-rate
-Description: Shipping method plugin to set shipping rate based on the order quantity
+Plugin Name: Woo Quantity Based Shipping Rate
+Plugin URI: https://wordpress.org/plugins/woo-quantity-based-shipping-rate
+Description: Shipping plugin to set shipping rate based on the total order quantity
 Version: 1.0.0
 Author: Prashanthi
 
@@ -25,7 +25,7 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
                  */
                 public function __construct()
                 {
-                    $this->id = 'shipping_rate_method'; // Id for your shipping method. Should be uunique.
+                    $this->id = 'shipping_rate_method'; // Id for your shipping method. Should be unique.
                     $this->method_title = __('Quantity Based Per Order Shipping Rate');  // Title shown in admin
                     $this->method_description = __('Allows you to set shipping rate based on the total order quantity'); // Description shown in admin
 
