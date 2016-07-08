@@ -16,7 +16,7 @@ PrangoShip -a Quantity Based shipping rate plugin that works well in your WooCom
 This section describes how to install the plugin and get it working.
 
 
-1. Upload the plugin files to the `/wp-content/plugins/quantity-based-shipping-rate` directory, or install the plugin through the WordPress plugins screen directly.
+1. Upload the plugin files to the `/wp-content/plugins/PrangoShip-Quantity-Based-Shipping-Rate-for-WooCommerce-master` directory, or install the plugin through the WordPress plugins screen directly.
 2. Activate the plugin through the 'Plugins' screen in WordPress
 3. Use the Settings->Shipping tab->Quantity Based Per Order Shipping Rate screen to configure the plugin
 4. Check the 'Enable this shipping method' and click on 'Save changes' button. 
