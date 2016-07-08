@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: EZShip Quantity Based Shipping Rate
+Plugin Name: PrangoShip Quantity Based Shipping Rate
 Plugin URI: https://wordpress.org/plugins/woocommerce-quantity-based-shipping-rate
 Description: Shipping method plugin to set shipping rate based on the order quantity
 Version: 1.0.0
