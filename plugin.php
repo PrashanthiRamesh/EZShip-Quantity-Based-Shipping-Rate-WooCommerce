@@ -13,10 +13,10 @@ Author: Prashanthi
  */
 if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_option('active_plugins')))) {
 
-    function your_shipping_method_init()
+    function wqbsr_init()
     {
-        if (!class_exists('WC_Your_Shipping_Method')) {
-            class WC_Your_Shipping_Method extends WC_Shipping_Method
+        if (!class_exists('WC_WQBSR_Method')) {
+            class WC_WQBSR_Method extends WC_Shipping_Method
             {
                 /**
                  * Constructor for your shipping class
@@ -26,8 +26,8 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
                 public function __construct()
                 {
                     $this->id = 'shipping_rate_method'; // Id for your shipping method. Should be unique.
-                    $this->method_title = __('Quantity Based Per Order Shipping Rate');  // Title shown in admin
-                    $this->method_description = __('Allows you to set shipping rate based on the total order quantity'); // Description shown in admin
+                    $this->method_title = 'Quantity Based Per Order Shipping Rate';  // Title shown in admin
+                    $this->method_description = 'Allows you to set shipping rate based on the total order quantity'; // Description shown in admin
 
                     $this->enabled = "yes"; // This can be added as an setting but for this example its forced enabled
                     $this->title = "Shipping Rate"; // This can be added as an setting but for this example its forced.
@@ -62,9 +62,9 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
                 {
                     $fields = array(
                         'enabled' => array(
-                            'title' => __('Enable/Disable', 'woocommerce'),
+                            'title' => 'Enable/Disable',
                             'type' => 'checkbox',
-                            'label' => __('Enable this shipping method', 'woocommerce'),
+                            'label' => 'Enable this shipping method',
                             'default' => 'no',
                             'desc_tip' => true
                         ),
@@ -155,24 +155,24 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
                     ob_start();
                     ?>
                     <tr valign="top">
-                        <th scope="row" class="titledesc"><?php _e('Set', 'woocommerce'); ?></th>
+                        <th scope="row" class="titledesc"><?php _e('Set', 'wqbsr'); ?></th>
                         <td class="forminp" id="<?php echo $this->id; ?>_table_rates">
                             <table class="shippingrows widefat" cellspacing="0">
                                 <thead>
                                 <tr>
                                     <th class="check-column"><input type="checkbox"></th>
-                                    <th class="debug-col"><?php _e('ID', 'woocommerce'); ?></th>
-                                    <th><?php _e('Name', 'woocommerce'); ?> <a class="tips"
-                                                                               data-tip="<?php _e('Name of the shipping method.', 'woocommerce'); ?>">[?]</a>
+                                    <th class="debug-col"><?php _e('ID', 'wqbsr'); ?></th>
+                                    <th><?php _e('Name', 'wqbsr'); ?> <a class="tips"
+                                                                               data-tip="<?php _e('Name of the shipping method.', 'wqbsr'); ?>">[?]</a>
                                     </th>
-                                    <th><?php _e('Minimum Quantity', 'woocommerce'); ?> <a class="tips"
-                                                                              data-tip="<?php _e('Minimum, in integer format. Inclusive.', 'woocommerce'); ?>">[?]</a>
+                                    <th><?php _e('Minimum Quantity', 'wqbsr'); ?> <a class="tips"
+                                                                              data-tip="<?php _e('Minimum, in integer format. Inclusive.', 'wqbsr'); ?>">[?]</a>
                                     </th>
-                                    <th><?php _e('Maximum Quantity', 'woocommerce'); ?> <a class="tips"
-                                                                              data-tip="<?php _e('Maximum, in integer format. Inclusive. ".', 'woocommerce'); ?>">[?]</a>
+                                    <th><?php _e('Maximum Quantity', 'wqbsr'); ?> <a class="tips"
+                                                                              data-tip="<?php _e('Maximum, in integer format. Inclusive. ".', 'wqbsr'); ?>">[?]</a>
                                     </th>
-                                    <th><?php _e('Rate', 'woocommerce'); ?> <a class="tips"
-                                                                               data-tip="<?php _e('Shipping rate ', 'woocommerce'); ?>">[?]</a>
+                                    <th><?php _e('Rate', 'wqbsr'); ?> <a class="tips"
+                                                                               data-tip="<?php _e('Shipping rate ', 'wqbsr'); ?>">[?]</a>
                                     </th>
 
                                 </tr>
@@ -180,9 +180,9 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
                                 <tfoot>
                                 <tr>
                                     <th colspan="7"><a href="#"
-                                                       class="add button"><?php _e('Add Shipping Rate', 'woocommerce'); ?></a>
+                                                       class="add button"><?php _e('Add Shipping Rate', 'wqbsr'); ?></a>
                                         <a href="#"
-                                           class="remove button"><?php _e('Delete Shipping Rates', 'woocommerce'); ?></a>
+                                           class="remove button"><?php _e('Delete Shipping Rates', 'wqbsr'); ?></a>
                                     </th>
                                 </tr>
                                 </tfoot>
@@ -250,7 +250,7 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
 
                                     // Remove row
                                     jQuery('#<?php echo $this->id; ?>_table_rates').on('click', 'a.remove', function () {
-                                        var answer = confirm("<?php _e('Delete the selected rates?', 'woocommerce'); ?>");
+                                        var answer = confirm("<?php _e('Delete the selected rates?', 'wqbsr'); ?>");
                                         if (answer) {
                                             jQuery('#<?php echo $this->id; ?>_table_rates table tbody tr th.check-column input:checked').each(function (i, el) {
                                                 jQuery(el).closest('tr').remove();
@@ -398,13 +398,13 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
         }
     }
 
-    add_action('woocommerce_shipping_init', 'your_shipping_method_init');
+    add_action('woocommerce_shipping_init', 'wqbsr_init');
 
-    function add_your_shipping_method($methods)
+    function add_wqbsr_method($methods)
     {
-        $methods[] = 'WC_Your_Shipping_Method';
+        $methods[] = 'WC_WQBSR_Method';
         return $methods;
     }
 
-    add_filter('woocommerce_shipping_methods', 'add_your_shipping_method');
+    add_filter('woocommerce_shipping_methods', 'add_wqbsr_method');
 }
