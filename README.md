@@ -7,6 +7,8 @@ Stable tag: truck
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
+Lets you assign shipping rates for various order quantity ranges in your WooCommerce Store.
+
 == Description ==
 
 PrangoShip -a Quantity Based shipping rate plugin that works well in your WooCommerce Store. It displays the shipping rate to your customers based on the quantity of items in the cart. You can segment the quantities into different ranges and assign the shipping rates respectively.
